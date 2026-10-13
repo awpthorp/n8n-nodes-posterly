@@ -72,7 +72,6 @@ export function actionArguments(action: NativeAction, input: Record<string, unkn
     if (key === 'native_approval' || key === 'native_idempotency_key' || value === undefined) continue;
     const schema = Object.prototype.hasOwnProperty.call(action.schema.properties ?? {}, key) ? action.schema.properties![key] : undefined;
     if (!schema) throw new Error(`${key} is not accepted by ${action.label}.`);
-    if (typeof value === 'string' && value === '' && !(action.schema.required ?? []).includes(key)) continue;
     let parsed = value;
     const types = Array.isArray(schema.type) ? schema.type : [schema.type];
     if (typeof value === 'string' && (types.includes('object') || types.includes('array'))) {
