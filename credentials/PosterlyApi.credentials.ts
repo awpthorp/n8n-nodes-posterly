@@ -3,8 +3,7 @@ import type { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INo
 export class PosterlyApi implements ICredentialType {
   name = 'posterlyApi';
   // Preserve the lowercase product brand in the credential picker.
-  // eslint-disable-next-line n8n-nodes-base/cred-class-field-display-name-miscased
-  displayName = 'posterly API';
+  displayName = 'Social Media API';
   icon = { light: 'file:../nodes/Posterly/posterly.png', dark: 'file:../nodes/Posterly/posterly.png' } as const;
   documentationUrl = 'https://www.poster.ly/integrations/n8n';
   properties: INodeProperties[] = [

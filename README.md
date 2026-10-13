@@ -2,13 +2,13 @@
 
 Connect n8n to [posterly](https://www.poster.ly) to validate and schedule social posts, list connected accounts, and inspect post status.
 
-This package is being prepared for its initial npm release and n8n verification. It is not yet a verified node in n8n Cloud.
+The community package is published on npm. n8n verification is in progress; it is not yet a verified node in n8n Cloud.
 
 ## Requirements
 
-A posterly plan with API access, a connected social account, and a workspace-scoped API key with `accounts:read`, `posts:read`, and `posts:write`. Create the key in [API settings](https://www.poster.ly/dashboard/api). Store it in an n8n credential of type **posterly API**. Never put a key into node parameters, workflow JSON, or source control.
+A posterly plan with API access, a connected social account, and a workspace-scoped API key with `accounts:read`, `posts:read`, and `posts:write`. Create the key in [API settings](https://www.poster.ly/dashboard/api). Store it in an n8n credential of type **Social Media API**. Never put a key into node parameters, workflow JSON, or source control.
 
-After publication, self-hosted n8n administrators can install `@posterly/n8n-nodes-posterly` through Settings > Community Nodes. n8n Cloud availability requires separate verification.
+Self-hosted n8n administrators can install `@posterly/n8n-nodes-posterly` through Settings > Community Nodes. n8n Cloud availability requires separate verification.
 
 ## Operations
 

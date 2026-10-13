@@ -1,6 +1,6 @@
 {
   "name": "@posterly/n8n-nodes-posterly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Schedule approved social posts, validate content, and inspect accounts and posts with posterly",
   "license": "MIT",
   "homepage": "https://www.poster.ly",
