@@ -38,6 +38,14 @@ Releases must run through `.github/workflows/publish.yml` with npm provenance. C
 
 Use an isolated, paused reviewer workspace for host tests. Test pagination, credential rejection, dry runs, retry deduplication, missing approval, and past-date rejection before submission. A successful build is not evidence of a live n8n execution.
 
+## Expanded draft 0.2.0
+
+This source adds a separate posterly Actions node with 97 operations while preserving existing workflows using the original node. It is not the 0.1.1 package currently awaiting a walkthrough. Complete that video before replacing the submitted version. Deploy MCP 0.51.1 before releasing 0.2.0.
+
+Choose an operation, then add its required Parameters and any optional fields you intend to send. Optional parameters are only sent when added, so an absent boolean never turns into an unintended false update. Complex objects and arrays accept JSON. Account, post, media, analytics, creative, engagement, administration and billing operations require the corresponding scopes and permissions on the configured key; do not grant additional access merely to make a test pass.
+
+Mutations require approval. Preview operations can first run without confirmation, then return Preview ID. Only confirm with the same inputs and that ID after approving the preview. Creating posts requires a stable idempotency key. Unlike the original Schedule Post operation, Create a Post supports approved immediate publication when the date is omitted. Data preserves raw IDs, dates and pagination cursors; follow the returned cursors for complete lists. The Actions node can also be attached as an AI-agent tool, subject to the same permissions and approvals.
+
 For product support, use [posterly support](https://www.poster.ly/dashboard/support).
 
 ## License
