@@ -1,0 +1,15 @@
+{
+  "name": "n8n-nodes-posterly",
+  "version": "0.1.0",
+  "description": "Schedule approved social posts, validate content, and inspect accounts and posts with posterly",
+  "license": "MIT",
+  "homepage": "https://www.poster.ly",
+  "keywords": ["n8n-community-node-package", "posterly", "social-media"],
+  "author": { "name": "Grassroots Marketing LLC", "email": "alex@poster.ly" },
+  "repository": { "type": "git", "url": "https://github.com/awpthorp/n8n-nodes-posterly.git" },
+  "scripts": { "build": "n8n-node build", "dev": "n8n-node dev", "lint": "n8n-node lint", "lint:fix": "n8n-node lint --fix", "test": "node --test test/*.test.cjs", "prepublishOnly": "n8n-node prerelease" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "n8n": { "n8nNodesApiVersion": 1, "strict": true, "credentials": ["dist/credentials/PosterlyApi.credentials.js"], "nodes": ["dist/nodes/Posterly/Posterly.node.js"] },
+  "devDependencies": { "@n8n/node-cli": "0.52.2", "typescript": "5.9.2" },
+  "peerDependencies": { "n8n-workflow": "*" }
+}
